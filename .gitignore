@@ -1,0 +1,4 @@
+input/*
+outputs/*
+venv/*
+.ipynb_checkpoints/*
