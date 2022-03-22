@@ -1,4 +1,4 @@
-@prefix compoundID:<https://identifiers.org/pubchem.compound>.
+@prefix compoundID:<https://identifiers.org/pubchem.compound> .
 @prefix DrugName : <https://> .
 @prefix Cross : <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8329444/> .
 @prefix SMILES : <https://identifiers.org/pubchem.compound> .
