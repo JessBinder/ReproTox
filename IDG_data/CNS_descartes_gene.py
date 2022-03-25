@@ -13,7 +13,7 @@ import rdflib
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS, XSD
 
-input_file = csv.DictReader(open("input/Descartes_filtered_Heart_GeneList.csv"))
+input_file = csv.DictReader(open("input/CNS_DESCARTES_Genes.csv"))
 
 g = Graph()
 PM = "pvalue_more: "
@@ -27,7 +27,7 @@ g.bind('gene',gene_symbol)
 for row in input_file:
     gene_URI = gene_symbol + str(row['gene'])
     row = dict(row)
-    g.add((URIRef(gene_URI), RDFS.label, Literal(PM + row['pvalue_Heart_more'])) )
-    g.add((URIRef(gene_URI), RDFS.label, Literal(PL + row['pvalue_Heart_less'])) )
+    g.add((URIRef(gene_URI), RDFS.label, Literal(PM + row['pvalue_CNS_more'])) )
+    g.add((URIRef(gene_URI), RDFS.label, Literal(PL + row['pvalue_CNS_less'])) )
 
-g.serialize(format="turtle",destination='IDG_Descartes_heart.ttl')
+g.serialize(format="turtle",destination='IDG_Descartes_CNS.ttl')
